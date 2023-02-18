@@ -1,0 +1,13 @@
+build==0.10.0
+cfgv==3.3.1
+distlib==0.3.6
+filelock==3.9.0
+identify==2.5.18
+nodeenv==1.7.0
+packaging==23.0
+platformdirs==3.0.0
+pre-commit==3.0.4
+pyproject_hooks==1.0.0
+PyYAML==6.0
+tomli==2.0.1
+virtualenv==20.19.0
