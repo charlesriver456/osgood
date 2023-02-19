@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "osgood"
 version = "0.0.1"
 authors = [
-  { name="", email="osgood.package@gmail.com" },
+  { name="charlesriver456", email="osgood.package@gmail.com" },
 ]
 description = "A small collection of useful functions"
 readme = "README.md"
@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/pypa/osgood"
-"Bug Tracker" = "https://github.com/pypa/osgood/issues"
+"Homepage" = "https://github.com/charlesriver456/osgood"
+"Bug Tracker" = "https://github.com/charlesriver456/osgood/issues"
