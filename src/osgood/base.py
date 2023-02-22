@@ -6,8 +6,8 @@ from typing import Any
 def ozip(list_to_zip: list[Any], groups: int) -> list[tuple]:
     """Zips adjacent elements of list ``list_to_zip`` into groupings of a given size.
 
-    If len(list_to_zip) % groups != 0, the remaining elements are ommitted.
-    If groups is larger than len(list_to_zip), then an empty list is returned.
+    If ``len(list_to_zip) % groups != 0``, the remaining elements are ommitted.
+    If ``groups > len(list_to_zip)``, then an empty list is returned.
 
     Parameters
     ----------
