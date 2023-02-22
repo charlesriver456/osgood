@@ -1,6 +1,27 @@
 # A collection of useful functions
 import warnings
-from typing import List, Tuple
+import time
+from functools import wraps
+from typing import List, Tuple, Optional, Callable
+
+
+def timeit(fn_identifier: Optional[str] = None) -> Callable:
+    def decorator(func: Callable):
+        # Default to the name of the function if no identifier is supplied
+        fn_identifier = func.__name__ if fn_identifier is None else fn_identifier
+
+        @wraps(func)
+        def inner(*args: Any, **kwargs: Any) -> Any:
+            start = time.perf_counter()
+            result = func(*args, **kwargs)
+            end = time.perf_counter()
+
+            print(f"Elapsed time ({fn_identifier}): {end - start}")
+            return result
+
+        return inner
+
+    return decorator
 
 
 def ozip(list_to_zip: list, groups: int) -> List[Tuple]:
