@@ -34,5 +34,5 @@ def ozip(list_to_zip: list[Any], groups: int, pad: bool = False) -> list[tuple]:
     
     # Pad with `None` if requested
     iterator = chain(list_to_zip, repeat(None, pad_len if pad else 0))
-    return list(zip(*[iter(iterator)] * groups))
+    return list(zip(*[iterator] * groups))
 
