@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## [1.0.1] - 2023-XX-XX
+- Cleaned up and documented the ``ozip`` function.
+
 ## [1.0.0] - 2023-02-XX
 
 ### New Features
