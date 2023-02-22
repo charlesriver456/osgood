@@ -14,9 +14,9 @@ def ozip(list_to_zip: list[Any], groups: int, pad: bool = False) -> list[tuple]:
     group
         The size of each group in the resulting zip.
     pad
-        A flag whether to pad with ``None`` any ungrouped straggling 
+        A flag whether to pad with ``None`` any ungrouped straggling
         elements of ``list_to_zip`` to form one final group. When left
-        as `False`, then if ``len(list_to_zip) % groups != 0``, 
+        as `False`, then if ``len(list_to_zip) % groups != 0``,
         the remaining elements are ommitted.
 
     Returns
@@ -25,14 +25,13 @@ def ozip(list_to_zip: list[Any], groups: int, pad: bool = False) -> list[tuple]:
         The resulting list of groupings as tuples.
     """
     pad_len = groups - len(list_to_zip) % groups
-    
+
     if not pad and pad_len != 0:
         n_trim = groups - pad_len
         warnings.warn(
             f"This part of passed list will be shaved off: {list_to_zip[-1 * n_trim:]}"
         )
-    
+
     # Pad with `None` if requested
     iterator = chain(list_to_zip, repeat(None, pad_len if pad else 0))
     return list(zip(*[iterator] * groups))
-
