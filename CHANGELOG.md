@@ -1,6 +1,11 @@
 # CHANGELOG
 
-## [1.0.1] - 2023-XX-XX
+## [1.1.0] - 2023-XX-XX
+
+### New Features
+- Implemented ``pad`` parameter to group any straggling elements with ``None``.
+
+### Other Changes
 - Cleaned up and documented the ``ozip`` function.
 
 ## [1.0.0] - 2023-02-XX
