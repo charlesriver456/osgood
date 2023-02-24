@@ -15,6 +15,9 @@ jobs:
       run: pip install scspell3k
     - uses: pre-commit/action@v3.0.0
   run-integration-test:
+    defaults:
+      run:
+        shell: bash -l {0}
     runs-on: ubuntu-latest
     steps:
       - name: Install osgood
