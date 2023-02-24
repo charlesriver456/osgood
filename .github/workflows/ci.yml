@@ -20,5 +20,7 @@ jobs:
         shell: bash -l {0}
     runs-on: ubuntu-latest
     steps:
-      - name: Install osgood
-        run: pip install -e . && pytest
+      - name: Install package
+        run: pip install -e
+      - name: Run tests
+        run: pytest
