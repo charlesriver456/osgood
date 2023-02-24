@@ -51,7 +51,7 @@ def ozip(list_to_zip: List[Any], groups: int, pad: bool = False) -> List[tuple]:
         A flag whether to pad with ``None`` any ungrouped straggling
         elements of ``list_to_zip`` to form one final group. When left
         as `False`, then if ``len(list_to_zip) % groups != 0``,
-        the remaining elements are ommitted.
+        the remaining elements are omitted.
 
     Returns
     -------
