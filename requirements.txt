@@ -1,5 +1,4 @@
 build
-osgood
 pip-chill
 pipreqs
 pre-commit
