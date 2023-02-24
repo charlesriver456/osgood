@@ -21,6 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install osgood
-        run: |
-        pip install -e .
-        pytest .
+        run: pip install -e . && pytest

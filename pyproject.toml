@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "osgood"
-version = "1.1.0"
+version = "1.1.0ls"
 authors = [
   { name="charlesriver456", email="osgood.package@gmail.com" },
 ]
