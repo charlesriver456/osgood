@@ -3,7 +3,7 @@ import warnings
 import time
 from functools import wraps
 from itertools import repeat, chain
-from typing import List, Tuple, Optional, Callable, Any
+from typing import List, Optional, Callable, Any
 
 
 def timeit(fn_identifier: Optional[str] = None) -> Callable:
