@@ -2,7 +2,8 @@
 import warnings
 import time
 from functools import wraps
-from typing import List, Tuple, Optional, Callable
+from itertools import repeat, chain
+from typing import List, Tuple, Optional, Callable, Any
 
 
 def timeit(fn_identifier: Optional[str] = None) -> Callable:
@@ -37,7 +38,7 @@ def timeit(fn_identifier: Optional[str] = None) -> Callable:
     return decorator
 
 
-def ozip(list_to_zip: list[Any], groups: int, pad: bool = False) -> list[tuple]:
+def ozip(list_to_zip: List[Any], groups: int, pad: bool = False) -> List[tuple]:
     """Zips adjacent elements of list ``list_to_zip`` into groupings of a given size.
 
     Parameters
