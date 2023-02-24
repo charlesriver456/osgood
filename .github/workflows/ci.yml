@@ -35,5 +35,7 @@ jobs:
     - uses: actions/setup-python@v3
     - name: Install package
       run: pip install -e .
-    - name: Run tests
+    - name: Install pytest
+      run: pip install pytest
+    - name: Run pytest
       run: pytest
