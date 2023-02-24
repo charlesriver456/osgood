@@ -9,3 +9,7 @@ import pytest
 )
 def test_ozip_1(test_list, passed_int, expected):
     assert ozip(test_list, passed_int) == expected
+
+
+def test_2():
+    print("test")
