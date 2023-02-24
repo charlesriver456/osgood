@@ -32,6 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install package
-        run: pip install -e
+        run: pip install -e .
       - name: Run tests
         run: pytest
