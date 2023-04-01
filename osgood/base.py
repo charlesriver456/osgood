@@ -1,9 +1,9 @@
 # A collection of useful functions
-import warnings
 import time
+import warnings
 from functools import wraps
-from itertools import repeat, chain
-from typing import List, Optional, Callable, Any
+from itertools import chain, repeat
+from typing import Any, Callable, List, Optional
 
 
 def timeit(fn_identifier: Optional[str] = None) -> Callable:
