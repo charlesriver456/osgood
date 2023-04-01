@@ -1,7 +1,8 @@
-import osgood
-from osgood.base import ozip, timeit
 import pytest
 from pytest import fixture
+
+import osgood
+from osgood.base import ozip, timeit
 
 DEFAULT_LIST = [1, 2, 3, 4]
 

@@ -1,0 +1,11 @@
+name: osgood_dev
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - python=3.8
+  - pip
+  - pytest
+  - precommit
+  - pip:
+    - -e .
