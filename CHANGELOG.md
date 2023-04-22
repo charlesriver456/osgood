@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [1.2.0] - 2023-04-22
+
+### New Features
+- Fixed issues with minor function import bugs
+
 ## [1.1.0] - 2023-02-24
 
 ### New Features
