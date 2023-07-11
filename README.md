@@ -4,3 +4,6 @@
 [![Downloads](https://static.pepy.tech/badge/osgood/month)](https://pepy.tech/project/osgood)
 
 This is a small package of useful components.
+
+docker compose build to build
+docker compose run app sh to run
