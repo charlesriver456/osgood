@@ -8,13 +8,6 @@ on:
       - master
 
 jobs:
-  pre-commit:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v3
-    - uses: pre-commit/action@v3.0.0
-
   lint_and_test:
     runs-on: ubuntu-latest
     steps:
@@ -31,6 +24,9 @@ jobs:
       - name: Lint with ruff
         run: |
           ruff .
+      - name: mypy it
+        run: |
+          mypy .
       - name: Install package
         run: pip install -e .
       - name: Run pytest
