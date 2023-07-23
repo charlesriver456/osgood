@@ -3,7 +3,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![image](https://img.shields.io/pypi/v/osgood.svg)](https://pypi.org/project/osgood)
 [![image](https://img.shields.io/pypi/l/osgood.svg)](https://pypi.org/project/osgood)
-[![image](https://img.shields.io/pypi/pyversions/ruff.svg)](https://pypi.org/project/osgood)
+[![](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Downloads](https://static.pepy.tech/badge/osgood/month)](https://pepy.tech/project/osgood)
 
 This is a small package of useful components.
