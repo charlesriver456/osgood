@@ -7,5 +7,6 @@ dependencies:
   - pip
   - pytest
   - precommit
+  - in_place
   - pip:
     - -e .
