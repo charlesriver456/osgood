@@ -5,6 +5,8 @@ from functools import wraps
 from itertools import chain, repeat
 from typing import Any, Callable, List, Optional
 
+import in_place
+
 
 def timeit(fn_identifier: Optional[str] = None) -> Callable:
     """Decorates a function such that its execution time is printed.
@@ -69,3 +71,34 @@ def ozip(list_to_zip: List[Any], groups: int, pad: bool = False) -> List[tuple]:
     # Pad with `None` if requested
     iterator = chain(list_to_zip, repeat(None, pad_len if pad else 0))
     return list(zip(*[iterator] * groups))
+
+def rossum_rip(text: str, file_flag: bool = True) -> Optional[str]:
+    """Removes walrusses from text.
+
+    Parameters
+    ----------
+    text
+        String of text or a .py file path to read from.
+    file_flag
+        Boolean flag to indicate if text is a file path (default is true).
+
+    Returns
+    -------
+    Optional[str]
+        Optionally returns a string if text is passed, otherwise,
+        if a file is passed, the file is edited and nothing is returned.
+    """
+    if file_flag is True:
+        with in_place.InPlace(text) as file_to_edit:
+            for line in file_to_edit:
+                print(f"{line=}")
+                if ":=" in line:
+                    file_to_edit.write(line.replace(":=", "="))
+                    file_to_edit.write("# WALRUS REMOVED ABOVE, DOUBLE CHECK \n")
+                    print(f"Line is now {line=}")
+                else:
+                    file_to_edit.write(line)
+        return None
+    else:
+        corrected_text = text.replace(":=", "=")
+        return corrected_text

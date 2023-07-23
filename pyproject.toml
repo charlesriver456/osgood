@@ -20,3 +20,6 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/charlesriver456/osgood"
 "Bug Tracker" = "https://github.com/charlesriver456/osgood/issues"
+
+[tool.ruff]
+line-length = 100
