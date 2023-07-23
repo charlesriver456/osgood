@@ -24,7 +24,7 @@ def timeit(fn_identifier: Optional[str] = None) -> Callable:
 
     def decorator(func: Callable):
         # Default to the name of the function if no identifier is supplied
-        fn_identifier = func.__name__ if fn_identifier is None else fn_identifier
+        fn_identifier = func.__name__ if fn_identifier is None else fn_identifier # noqa: F823
 
         @wraps(func)
         def inner(*args: Any, **kwargs: Any) -> Any:
