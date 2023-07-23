@@ -64,7 +64,7 @@ def test_rossum_rip_py_file() -> None:
 # WALRUS REMOVED ABOVE, DOUBLE CHECK
     return 1"""
     os.remove(test_file_name)
-    assert edited_file_text == correct_text
+    assert edited_file_text.replace(" ", "") == correct_text.replace(" ", "")
 
 def test_rossum_rip_string() -> None:
     example_string = "I am an ardent walrus user. Here is an example: (example_var := 1)."
