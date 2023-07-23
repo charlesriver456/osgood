@@ -15,4 +15,4 @@ This package comes with a `Dockerfile` and `docker-compose` files to allow docke
 The build command in the `docker-compose.yml` takes care of building the `Dockerfile`. If you'd like to force a rebuild run `docker-compose up --build`.
 
 To test:
-Run tests locally with `pytest` at the root of the repo. Alternatively, build and run the test image with `docker compose -f docker-compose-test.yml up`. This will display test results.
+Run `pytest` at the root of the repo.
