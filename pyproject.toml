@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "osgood"
-version = "1.2.0"
+version = "1.3.0"
 authors = [
   { name="charlesriver456", email="osgood.package@gmail.com" },
 ]
 description = "A small collection of useful functions"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -20,3 +20,6 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/charlesriver456/osgood"
 "Bug Tracker" = "https://github.com/charlesriver456/osgood/issues"
+
+[tool.ruff]
+line-length = 100

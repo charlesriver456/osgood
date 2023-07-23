@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [1.3.0] - 2023-07-23
+- Added new de-walruser function (`rossum_rip`)
+- Added support for 3.8-3.11, removed support for 3.7
+- Added some docker stuff
+
 ## [1.2.0] - 2023-04-22
 
 ### New Features
