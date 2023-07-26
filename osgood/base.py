@@ -5,7 +5,7 @@ from functools import wraps
 from itertools import chain, repeat
 from typing import Any, Callable, List, Optional
 
-#import in_place  # type: ignore
+import in_place  # type: ignore
 
 
 def timeit(fn_identifier: Optional[str] = None) -> Callable:
