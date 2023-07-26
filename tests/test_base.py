@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from osgood.base import ozip, rossum_rip, timeit
+from osgood.base import ozip, rossum_rip, timeit, gcd
 
 DEFAULT_LIST = [1, 2, 3, 4]
 
@@ -71,3 +71,24 @@ def test_rossum_rip_string() -> None:
     correct_text = rossum_rip(example_string, file_flag=False)
     expected_correct_text = "I am an ardent walrus user. Here is an example: (example_var = 1)."
     assert correct_text == expected_correct_text
+
+def test_gcd() -> None:
+    num1 = 100
+    num2 = 50
+    expected_gcd = 50
+    ans = gcd(num1, num2)
+    assert expected_gcd == ans
+
+def test_gcd_edge() -> None:
+    num1 = 0
+    num2 = 50
+    expected_gcd = 50
+    ans = gcd(num1, num2)
+    assert expected_gcd == ans
+
+def test_gcd_double_edge() -> None:
+    num1 = 0
+    num2 = 0
+    expected_gcd = 0
+    ans = gcd(num1, num2)
+    assert expected_gcd == ans
