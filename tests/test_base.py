@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from osgood.base import ozip, rossum_rip, timeit
+from osgood.base import ozip, rossum_rip, timeit, gcd
 
 DEFAULT_LIST = [1, 2, 3, 4]
 
@@ -71,3 +71,8 @@ def test_rossum_rip_string() -> None:
     correct_text = rossum_rip(example_string, file_flag=False)
     expected_correct_text = "I am an ardent walrus user. Here is an example: (example_var = 1)."
     assert correct_text == expected_correct_text
+
+@pytest.mark.parametrize("num1, num2, expected", [(100, 50, 50), (0, 50, 50), (0, 0, 0)])
+def test_gcd(num1, num2, expected) -> None:
+    ans = gcd(num1, num2)
+    assert expected == ans

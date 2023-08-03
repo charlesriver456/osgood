@@ -102,3 +102,30 @@ def rossum_rip(text: str, file_flag: bool = True) -> Optional[str]:
     else:
         corrected_text = text.replace(":=", "=")
         return corrected_text
+
+def gcd(x: int, y: int) -> int:
+    """Calculates greatest common denominator.
+
+        Parameters
+        ----------
+        x
+            First integer to find GCD of.
+        y
+            Second integer to find GCD of.
+
+        Returns
+        -------
+        int
+            Returns integer representing the GCD.
+        """
+    if (x == 0):
+        return y
+
+    if (y == 0):
+        return x
+
+    r = x % y
+    if (r != 0):
+        return gcd(y, r)
+    else:
+        return y
