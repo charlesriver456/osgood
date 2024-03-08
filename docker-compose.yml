@@ -1,10 +1,10 @@
 version: "3"
 services:
-  app:
+  osgood-app:
     build:
       context: .
     ports:
-      - '8000:8000'
+      - '8008:8008'
     volumes:
       - .:/app
     tty: true
